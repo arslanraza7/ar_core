@@ -77,12 +77,20 @@ Replace your Scaffold to Augmented(), and it will handle all your view. if you w
 
 #Write this code in main
 ```dart
-try {
+
+import 'package:camera/camera.dart';
+import 'package:flutter/material.dart';
+
+List<CameraDescription> cameras = [];
+Future<void> main() async {
+  try {
     WidgetsFlutterBinding.ensureInitialized();
     cameras = await availableCameras();
   } on CameraException catch (e) {
     print(e.description);
   }
+  runApp(const MyApp());
+}
 ```
 
 ```dart
@@ -97,6 +105,7 @@ class _AugmentedRealityState extends State<AugmentedReality> {
   @override
   Widget build(BuildContext context) {
     return Augmented(
+     /// Provide Network Image Link to add your object
     image: 'https://freepngimg.com/static/img/cat/hair.png'
     );
   }

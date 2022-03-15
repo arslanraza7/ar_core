@@ -1,5 +1,5 @@
 name: ar_core
-description: Flutter Package for Augmented Reality
+description:  Flutter Plugin for adding  Augmented Reality in application - Supports Real time camera and objects plecement of an object on iOS and Android devices
 version: 0.0.2+5
 author: Arslan Raza <arslanraza775@gmail.com>
 homepage: https://github.com/arslanraza7/ar_core
