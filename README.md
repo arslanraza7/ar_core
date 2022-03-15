@@ -70,3 +70,23 @@ Add this to your code:
 import 'package:ar_core/ar_core.dart';
 ```
 
+
+### Usage or How to Use
+Replace your Scaffold to Augmented(), and it will handle all your view. if you want to pass an image just pass an image as a constructor.
+```dart
+class AugmentedReality extends StatefulWidget {
+  const AugmentedReality({Key? key}) : super(key: key);
+
+  @override
+  _AugmentedRealityState createState() => _AugmentedRealityState();
+}
+
+class _AugmentedRealityState extends State<AugmentedReality> {
+  @override
+  Widget build(BuildContext context) {
+    return Augmented(
+    image: 'https://freepngimg.com/static/img/cat/hair.png'
+    );
+  }
+}
+```
