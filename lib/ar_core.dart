@@ -16,7 +16,7 @@ class _AugmentedState extends State<Augmented> {
   bool loadingCamera = false;
   void loadCamera() async {
     setState(() {
-      loadingCamera = true;
+      loadingCamera = true;//
     });
     try {
       cameras = await availableCameras();
