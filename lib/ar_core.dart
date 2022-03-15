@@ -5,6 +5,7 @@ import 'augmented_reality/augmented_preview.dart';
 
 
 // ignore: must_be_immutable
+// dart pub publish // to publish package
 class Augmented extends StatefulWidget {
   var image;
   Augmented({this.image});

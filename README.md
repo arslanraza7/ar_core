@@ -92,7 +92,7 @@ Future<void> main() async {
   runApp(const MyApp());
 }
 ```
-
+### Add main class
 ```dart
 class AugmentedReality extends StatefulWidget {
   const AugmentedReality({Key? key}) : super(key: key);
