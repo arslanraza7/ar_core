@@ -4,8 +4,10 @@ import 'package:camera/camera.dart';
 import 'augmented_reality/augmented_preview.dart';
 
 
+// ignore: must_be_immutable
 class Augmented extends StatefulWidget {
-
+  var image;
+  Augmented({this.image});
   @override
   _AugmentedState createState() => _AugmentedState();
 }
@@ -81,7 +83,7 @@ class _AugmentedState extends State<Augmented> {
               Container(
                   height: onchange,
                   color: Colors.transparent,
-                  child: Image.network('https://freepngimg.com/thumb/3d/32378-7-3d-photos-thumb.png', height: onchange,width: onchange,)),
+                  child: Image.network(widget.image == null?'https://freepngimg.com/thumb/3d/32378-7-3d-photos-thumb.png': widget.image, height: onchange,width: onchange,)),
             ),
           ),
           Positioned(
