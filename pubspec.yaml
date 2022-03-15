@@ -1,7 +1,7 @@
 name: ar_core
 description: Flutter Package for Augmented Reality
 version: 0.0.2
-author: Arslan Raza
+author: Arslan Raza <arslanraza775@gmail.com>
 homepage: https://github.com/arslanraza7/ar_core
 
 environment:

@@ -5,6 +5,13 @@ ar_core is an augmented reality mobile application kit for mobile devices that e
 
 Many thanks to Arslan Raza for the [ar_core](https://github.com/arslanraza7/ar_core), he served as a great basis and starting point for this project.
 
+## Features
+
+* Display live camera preview in a widget.
+* Choose Asset, Network or 3d objects.
+* Drag, Resize, Rotate, Zoom in and out objects.
+* Add access to the image stream from Dart.
+
 ## Getting Started
 
 ### Installing
