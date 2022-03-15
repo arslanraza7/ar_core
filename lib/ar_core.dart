@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 
-import 'augmented_reality/camera_preview.dart';
-
+import 'augmented_reality/augmented_preview.dart';
 
 
 class Augmented extends StatefulWidget {
@@ -23,12 +22,16 @@ class _AugmentedState extends State<Augmented> {
       cameras = await availableCameras();
       controller = CameraController(cameras[0], ResolutionPreset.ultraHigh);
       await controller.initialize();
-      loadingCamera = false;
+      setState(() {
+        loadingCamera = false;
+      });
 
       print('controller value');
       print(controller.toString());
     } catch (e) {
-      loadingCamera = false;
+      setState(() {
+        loadingCamera = false;
+      });
       print(e.toString());
     }
 
@@ -42,22 +45,28 @@ class _AugmentedState extends State<Augmented> {
     super.initState();
     loadCamera();
   }
-  double xPosition = 0;
-  double yPosition = 0;
+  double xPosition = 130;
+  double yPosition = 150;
   double height = 150;
-  double onchange = 22;
+  double onchange = 150;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Testing'),
+        title: Text('Augmented Reality'),
       ),
-      body: Stack(
+      body:
+      loadingCamera?
+      Center(
+        child: CircularProgressIndicator(),
+      ):
+
+      Stack(
         children: [
           Container(
               height: 1000,
               width: MediaQuery.of(context).size.width,
-              child: CameraWidget(controller)),
+              child: ArWidget(controller)),
           Positioned(
             top: yPosition,
             left: xPosition,
@@ -75,16 +84,17 @@ class _AugmentedState extends State<Augmented> {
               Container(
                   height: onchange,
                   color: Colors.transparent,
-                  child: Image.network('assets/female.png', height: onchange,width: onchange,)),
+                  child: Image.network('https://freepngimg.com/thumb/3d/32378-7-3d-photos-thumb.png', height: onchange,width: onchange,)),
             ),
           ),
           Positioned(
               bottom: 0,
               left: 0,
+              right: 10,
               child: Slider(
                 value: onchange,
-                min: 20,
-                max: 100,
+                min: 10,
+                max: 300,
                 onChanged: (value){
                   setState(() {
                     onchange = value;
@@ -97,4 +107,6 @@ class _AugmentedState extends State<Augmented> {
     );
   }
 }
+
+
 

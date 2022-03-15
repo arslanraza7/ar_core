@@ -1,4 +1,4 @@
-# ar_core
+# ar_core Flutter Package for Augmented Reality
 [![pub package](https://img.shields.io/pub/v/camera.svg)](https://pub.dev/packages/ar_core)
 
 ar_core is an augmented reality mobile application kit for mobile devices that enables the creation of augmented reality applications.
@@ -8,7 +8,8 @@ Many thanks to Arslan Raza for the [ar_core](https://github.com/arslanraza7/ar_c
 ## Features
 
 * Display live camera preview in a widget.
-* Choose Asset, Network or 3d objects.
+* Custom Camera, Place anywhere on the Screen.
+* Choose Asset, Network or 3d objects in png.
 * Drag, Resize, Rotate, Zoom in and out objects.
 * Add access to the image stream from Dart.
 

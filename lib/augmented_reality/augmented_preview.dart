@@ -7,9 +7,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 /// A widget showing a live camera preview.
-class CameraPreview extends StatelessWidget {
+class StartAugmentedReality extends StatelessWidget {
   /// Creates a preview widget for the given camera controller.
-  const CameraPreview(this.controller, {this.child});
+  const StartAugmentedReality(this.controller, {this.child});
 
   /// The controller for the camera that the preview is shown for.
   final CameraController controller;
@@ -70,8 +70,8 @@ class CameraPreview extends StatelessWidget {
 }
 
 
-class CameraWidget extends StatelessWidget {
-  CameraWidget(this.controller);
+class ArWidget extends StatelessWidget {
+  ArWidget(this.controller);
   final controller;
 
   @override
@@ -84,7 +84,7 @@ class CameraWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(10)
         ),
         child:
-        CameraPreview(controller),
+        StartAugmentedReality(controller),
       ),
 
 
