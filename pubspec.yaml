@@ -1,16 +1,17 @@
 name: ar_core
-description: Flutter Package
+description: Flutter Package for Augmented Reality
 version: 0.0.1
-author:
-homepage:
+author: Arslan Raza
+homepage: https://github.com/arslanraza7/ar_core
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
   flutter: ">=1.17.0 <2.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
+  camera: ^0.9.4+16
 
 dev_dependencies:
   flutter_test:
