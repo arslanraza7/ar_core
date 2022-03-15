@@ -52,9 +52,6 @@ class _AugmentedState extends State<Augmented> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Augmented Reality'),
-      ),
       body:
       loadingCamera?
       Center(
