@@ -62,5 +62,3 @@ Add this to your code:
 import 'package:ar_core/ar_core.dart';
 ```
 
-If you have problems with permissions on iOS (e.g. with the camera view not showing up even though camera access is allowed), add this to the ```podfile``` of your app's ```ios``` directory:
-
