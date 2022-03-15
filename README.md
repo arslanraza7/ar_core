@@ -72,7 +72,19 @@ import 'package:ar_core/ar_core.dart';
 
 
 ### Usage or How to Use
+
 Replace your Scaffold to Augmented(), and it will handle all your view. if you want to pass an image just pass an image as a constructor.
+
+#Write this code in main
+```dart
+try {
+    WidgetsFlutterBinding.ensureInitialized();
+    cameras = await availableCameras();
+  } on CameraException catch (e) {
+    print(e.description);
+  }
+```
+
 ```dart
 class AugmentedReality extends StatefulWidget {
   const AugmentedReality({Key? key}) : super(key: key);
