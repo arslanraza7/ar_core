@@ -75,7 +75,7 @@ class _AugmentedState extends State<Augmented> {
               Container(
                   height: onchange,
                   color: Colors.transparent,
-                  child: Image.asset('assets/female.png', height: onchange,width: onchange,)),
+                  child: Image.network('assets/female.png', height: onchange,width: onchange,)),
             ),
           ),
           Positioned(
